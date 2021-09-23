@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>storesalesdata.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Store" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Day" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Month" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Year" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Dry_Grocery" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Dairy" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Frozen_Food" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Meat" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Produce" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Floral" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Deli" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="Bakery" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+            <Field name="General_Merchandise" size="254" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="186" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Month" action="GroupBy" rename="Month" />
+            <SummarizeField field="Year" action="GroupBy" rename="Year" />
+            <SummarizeField field="Produce" action="Sum" rename="Sum_Produce" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="114" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Store" selected="True" />
+            <Field field="Day" selected="True" />
+            <Field field="Month" selected="True" />
+            <Field field="Year" selected="True" />
+            <Field field="Dry_Grocery" selected="True" />
+            <Field field="Dairy" selected="True" />
+            <Field field="Frozen_Food" selected="True" />
+            <Field field="Meat" selected="True" />
+            <Field field="Produce" selected="True" />
+            <Field field="Floral" selected="True" />
+            <Field field="Deli" selected="True" />
+            <Field field="Bakery" selected="True" />
+            <Field field="General_Merchandise" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Store" size="5" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="String" />
+            <Field name="Day" size="2" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="String" />
+            <Field name="Month" size="2" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="String" />
+            <Field name="Year" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Int16" />
+            <Field name="Dry_Grocery" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Dairy" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Frozen_Food" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Meat" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Produce" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Floral" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Deli" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="Bakery" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+            <Field name="General_Merchandise" source="File: C:\Users\user\Documents\UDACITY2020\Bertelsmann scholarship\UDACITY BUSINESS DATA ANALYST NANODEGREE\Clustering\capstone project\storesalesdata.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="270" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="354" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>RecordID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-09-23 17:43:33</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>40</Operand>
+              <StartDate>2021-09-23 17:43:33</StartDate>
+              <EndDate>2021-09-23 17:43:33</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] &lt;= 40</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings>
+        <Position x="498" y="-6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="mod_name">ARIMA</Value>
+          <Value name="target_field">Sum_Produce</Value>
+          <Value name="use_covar">False</Value>
+          <Value name="covars">"RecordID", "Month", "Year", "Sum_Produce"</Value>
+          <Value name="use_covar_mean">True</Value>
+          <Value name="use_covar_diff">False</Value>
+          <Value name="freq_hourly">False</Value>
+          <Value name="freq_daily">False</Value>
+          <Value name="freq_weekdays">False</Value>
+          <Value name="freq_weekly">False</Value>
+          <Value name="freq_monthly">True</Value>
+          <Value name="freq_quarterly">False</Value>
+          <Value name="freq_annually">False</Value>
+          <Value name="freq_other">False</Value>
+          <Value name="custom_auto">False</Value>
+          <Value name="first_dif">False</Value>
+          <Value name="level_first_dif">0</Value>
+          <Value name="max_p">2</Value>
+          <Value name="max_q">2</Value>
+          <Value name="seas_dif">False</Value>
+          <Value name="level_seas_dif">0</Value>
+          <Value name="s_max_P">1</Value>
+          <Value name="s_max_Q">1</Value>
+          <Value name="ic_aic">False</Value>
+          <Value name="ic_aicc">True</Value>
+          <Value name="ic_bic">False</Value>
+          <Value name="full_enum">False</Value>
+          <Value name="max_order">5</Value>
+          <Value name="m_core">False</Value>
+          <Value name="drift">True</Value>
+          <Value name="box_cox">False</Value>
+          <Value name="lambda">0.00</Value>
+          <Value name="full_custom">False</Value>
+          <Value name="p">0</Value>
+          <Value name="d">0</Value>
+          <Value name="q">0</Value>
+          <Value name="S_P">0</Value>
+          <Value name="S_D">0</Value>
+          <Value name="S_Q">0</Value>
+          <Value name="m_drift">False</Value>
+          <Value name="m_box_cox">False</Value>
+          <Value name="m_lambda">0.00</Value>
+          <Value name="series_start">False</Value>
+          <Value name="start_year">1980</Value>
+          <Value name="start_month_qtr">1</Value>
+          <Value name="forecast_periods">6</Value>
+          <Value name="alteryx.week.US">True</Value>
+          <Value name="alteryx.week.UK">False</Value>
+          <Value name="alteryx.week.ISO8601">False</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.00</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\ARIMA.yxmc" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings>
+        <Position x="474" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="mod_name">ETS</Value>
+          <Value name="target_field">Sum_Produce</Value>
+          <Value name="freq_hourly">False</Value>
+          <Value name="freq_daily">False</Value>
+          <Value name="freq_weekdays">False</Value>
+          <Value name="freq_weekly">False</Value>
+          <Value name="freq_monthly">True</Value>
+          <Value name="freq_quarterly">False</Value>
+          <Value name="freq_annually">False</Value>
+          <Value name="freq_other">False</Value>
+          <Value name="error_auto">True</Value>
+          <Value name="error_add">False</Value>
+          <Value name="error_mult">False</Value>
+          <Value name="trend_type_auto">True</Value>
+          <Value name="trend_type_add">False</Value>
+          <Value name="trend_type_mult">False</Value>
+          <Value name="trend_type_none">False</Value>
+          <Value name="trend_damp_auto">True</Value>
+          <Value name="trend_damp_yes">False</Value>
+          <Value name="trend_damp_no">False</Value>
+          <Value name="seas_auto">True</Value>
+          <Value name="seas_add">False</Value>
+          <Value name="seas_mult">False</Value>
+          <Value name="seas_none">False</Value>
+          <Value name="ic_auto">True</Value>
+          <Value name="ic_aic">False</Value>
+          <Value name="ic_aicc">False</Value>
+          <Value name="ic_bic">False</Value>
+          <Value name="box_cox">False</Value>
+          <Value name="lambda">0.00</Value>
+          <Value name="series_start">False</Value>
+          <Value name="start_year">2012</Value>
+          <Value name="start_month_qtr">1</Value>
+          <Value name="forecast_periods">6</Value>
+          <Value name="alteryx.week.US">True</Value>
+          <Value name="alteryx.week.UK">False</Value>
+          <Value name="alteryx.week.ISO8601">False</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\ETS.yxmc" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="654" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_223f60e6a9e4434e892b25d4b0a7c6a2_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="654" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_e3608dcd43e4430a8d5cf293522500c7_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="654" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_5367e265a16c4ec68c2af2048a2ee0c2_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="654" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_6414e9fdf541424ba1974fdf41fcb968_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="738" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings>
+        <Position x="726" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\TS_Compare.yxmc" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_c04978934d2b41faab54a08782f918f7_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_feba951cc4fa48119bb6832acf2bcd1f_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings>
+        <Position x="258" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="target_field">Sum_Produce</Value>
+          <Value name="freq_hourly">False</Value>
+          <Value name="freq_daily">False</Value>
+          <Value name="freq_weekdays">False</Value>
+          <Value name="freq_weekly">False</Value>
+          <Value name="freq_monthly">True</Value>
+          <Value name="freq_quarterly">False</Value>
+          <Value name="freq_annually">False</Value>
+          <Value name="freq_other">False</Value>
+          <Value name="series_start">False</Value>
+          <Value name="start_year">2012</Value>
+          <Value name="start_month_qtr">1</Value>
+          <Value name="ts_plot">True</Value>
+          <Value name="seas_plot">False</Value>
+          <Value name="seas_dev_plot">False</Value>
+          <Value name="acf_plot">False</Value>
+          <Value name="pacf_plot">False</Value>
+          <Value name="decomp_plot">False</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\TS_Plot.yxmc" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="342" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_8dd6d3a4c0544a68b4560909951cafb6_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="342" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\user\AppData\Local\Temp\Engine_19812_906782af803a409e98f816f773394529_\Engine_7380_4c19e825743b4eebad5fc3a9e5cbe95a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="False" />
+      <Destination ToolID="20" Connection="Right Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Left Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Interactive" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Report" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Report" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Interactive" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Interactive" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Report" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Interactive" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>task3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7731b352-4ad5-4ecb-962a-c040225cbb51" />
+      <Telemetry>
+        <PreviousWorkflowId value="a2c48dbb-0a3b-497a-8708-23c05c76be53" />
+        <OriginWorkflowId value="7731b352-4ad5-4ecb-962a-c040225cbb51" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
